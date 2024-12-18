@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfume Catalog and Auction</title>
+  <link rel="stylesheet" href="stylo.css">
+</head>
+<body>
+  <header>
+    <h1>winter Perfume Auction</h1>
+  </header>
+
+  <main>
+    <!-- Perfume Catalog Section -->
+    <section class="catalog">
+      <h2>Perfume Catalog</h2>
+      <div class="perfume-list">
+        <!-- Perfume 1 -->
+        <div class="perfume-card">
+          <img src="https://scontent.fdac7-1.fna.fbcdn.net/v/t39.30808-6/459255196_498964359555339_6583524657837632812_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=hiyR5O-cjrMQ7kNvgHNCUkS&_nc_zt=23&_nc_ht=scontent.fdac7-1.fna&_nc_gid=A3jX-yMzS-gqSZakqbxC5KO&oh=00_AYCiTW0E0PoZkAxw2yRxtRivpZ83NJKv75_Cv7FYAfhUhw&oe=6757B042" alt="Perfume 1" class="perfume-image">
+          <h3>RASASI HAWAS ICE 100ml EDP.</h3>
+          <p>Price:60$</p>
+          <button class="auction-button" onclick="startAuction('Floral Bliss','HAWAS ice', 60)">Start Auction</button>
+        </div>
+
+        <!-- Perfume 2 -->
+        <div class="perfume-card">
+          <img src="https://scontent.fdac7-1.fna.fbcdn.net/v/t39.30808-6/459540197_498964409555334_4993411968055067710_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=1nn2IT6cj2QQ7kNvgF3EkwU&_nc_zt=23&_nc_ht=scontent.fdac7-1.fna&_nc_gid=AJQ1xL91TjbIOW8gFZ-MN9U&oh=00_AYAqGhgmJ34E1dLZt5y90o-Cbu3SLK-i94dOHzoQDDRpbw&oe=6757B7FB" alt="Perfume 2" class="perfume-image">
+          <h3>ARMAF CLUB DE NUIT INTENSE MEN 100ml EDT.</h3>
+          <p>Price: $35</p>
+          <button class="auction-button" onclick="startAuction('Elegance','INTENSE MEN' ,35)">Start Auction</button>
+        </div>
+
+        <!-- Perfume 3 -->
+        <div class="perfume-card">
+          <img src="https://scontent.fdac7-1.fna.fbcdn.net/v/t39.30808-6/458449846_495055306612911_5747758215671073084_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=lMYJVBgrST4Q7kNvgF7O2AQ&_nc_zt=23&_nc_ht=scontent.fdac7-1.fna&_nc_gid=AG9U74xwwDaXBEYMU8jGsKA&oh=00_AYBvqnBEgn0m9q1z9gHRU668tc9jh2eEeomW6Q8LcvHMUQ&oe=6757BD26" alt="Perfume 3" class="perfume-image">
+          <h3>ENCRE NOIRE LALIQUE 100ml EDT.</h3>
+          <p>Price: $33</p>
+          <button class="auction-button" onclick="startAuction('Woody,stong','ENCRE NOIRE' ,33)">Start Auction</button>
+        </div>
+      
+
+      <!-- Perfume 4 -->
+      <div class="perfume-card">
+        <img src="https://perfume-bd.com/wp-content/uploads/2023/08/AFNAN-9-PM-1.jpg" alt="Perfume 1" class="perfume-image">
+        <h3>AFNAN 9PM 100ml EDP.</h3>
+        <p>Price:40$</p>
+        <button class="auction-button" onclick="startAuction('Party','9PM',40)">Start Auction</button>
+      </div>
+
+    </div>
+
+
+    </section>
+
+
+    <section class="auction" id="auction-section">
+      <h2>Live Auction</h2>
+      <div id="auction-details" class="hidden">
+        <p id="auction-item">Auctioning: <strong></strong></p>
+        <p id="current-bid">Current Bid: $<span>0</span></p>
+        <p id="auction-timer">Time Left: <span id="timer">60</span> seconds</p>
+        <div class="auction-controls">
+          <input type="number" id="bid-amount" placeholder="Enter your bid">
+          <button onclick="placeBid()">Place Bid</button>
+        </div>
+        <p id="auction-status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Perfume Auction</p>
+  </footer>
+
+  <script src="java.js"></script>
+</body>
+</html>
